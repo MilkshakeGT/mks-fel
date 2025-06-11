@@ -6,8 +6,8 @@
     'data': [
          #'views/account_move_views.xml',
          'views/account_move_views_.xml',
-         #'views/report_invoice_fel_v17.xml',
-         'views/report_invoice_fel_v18.xml',
+         'views/report_invoice_fel_v17.xml',
+         #'views/report_invoice_fel_v18.xml',
          #'views/report_invoice_fel_pos.xml',
     ],
     'installable': True,
