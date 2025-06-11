@@ -1,0 +1,55 @@
+<odoo>
+  <record id="view_move_form_fel" model="ir.ui.view">
+    <field name="name">account.move.form.fel</field>
+    <field name="model">account.move</field>
+    <field name="inherit_id" ref="account.view_move_form"/>
+    <field name="priority" eval="100"/>
+    <field name="arch" type="xml">
+
+      <!-- Botón de certificar FEL -->
+      <xpath expr="//header" position="inside">
+        <button name="action_certify_fel"
+                string="Certificar FEL"
+                type="object"
+                class="btn btn-primary"/>
+      </xpath>
+
+      <!-- Botón de anular FEL -->
+      <xpath expr="//header" position="inside">
+        <button name="action_cancel_fel"
+                string="Anular FEL"
+                type="object"
+                class="oe_highlight"/>
+      </xpath>
+
+      <!-- Campo show_fel_button -->
+      <xpath expr="//sheet" position="inside">
+        <field name="show_fel_button" invisible="1"/>
+      </xpath>
+
+      <!-- Campos FEL principales -->
+      <xpath expr="//field[@name='invoice_date']" position="after">
+        <field name="fel_uuid" readonly="1"/>
+      </xpath>
+      <xpath expr="//field[@name='fel_uuid']" position="after">
+        <field name="serie_fel" readonly="1"/>
+      </xpath>
+      <xpath expr="//field[@name='serie_fel']" position="after">
+        <field name="numero_fel" readonly="1"/>
+      </xpath>
+      <xpath expr="//field[@name='numero_fel']" position="after">
+        <field name="fechaEmision_fel" readonly="1"/>
+      </xpath>
+
+      <!-- Grupo FEL Anulación -->
+      <xpath expr="//field[@name='fechaEmision_fel']" position="after">
+        <group string="FEL Anulación" col="2">
+            <field name="fel_cancelled" readonly="1"/>
+            <field name="fel_cancel_reason" modifiers="{'readonly': [['fel_cancelled','=',True]]}"/>
+            <field name="fel_cancel_date" readonly="1"/>
+        </group>
+      </xpath>
+
+    </field>
+  </record>
+</odoo>
