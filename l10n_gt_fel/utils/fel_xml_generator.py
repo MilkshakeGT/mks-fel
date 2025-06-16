@@ -1,4 +1,19 @@
 from lxml import etree
+import re
+import html
+
+def limpiar_descripcion(texto):
+    """Limpia el texto para que sea seguro en el campo <Description> del XML FEL"""
+    if not texto:
+        return ''
+    # Eliminar etiquetas HTML si las hay
+    texto = re.sub(r'<[^>]+>', '', texto)
+    # Reemplazar saltos de línea por espacio
+    texto = texto.replace('\n', ' ').replace('\r', ' ')
+    # Escapar caracteres especiales XML
+    texto = html.escape(texto)
+    # Limitar la longitud si es necesario
+    return texto #[:250]
 
 def generar_xml_fel(factura):
     """
@@ -75,7 +90,8 @@ def generar_xml_fel(factura):
         product_type = "Servicio" if line.product_id.type == 'service' else "Bien"
         etree.SubElement(item, "Type").text = product_type
 
-        etree.SubElement(item, "Description").text = line.name or ""
+        #etree.SubElement(item, "Description").text = line.name or ""
+        etree.SubElement(item, "Description").text = limpiar_descripcion(line.name)
         etree.SubElement(item, "Qty").text = f"{line.quantity:.6f}"
         etree.SubElement(item, "UnitOfMeasure").text = line.product_uom_id.name or "UNI"
         etree.SubElement(item, "Price").text = f"{line.price_unit:.6f}"
