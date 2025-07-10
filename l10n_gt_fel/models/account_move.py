@@ -64,12 +64,12 @@ class AccountMove(models.Model):
       format = 'XML'
       
       # Test
-      # url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      # url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+      url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
 
       #Productivo
-      url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+      # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      # url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
 
       # Paso 1: Obtener el token
       try:
@@ -138,11 +138,11 @@ class AccountMove(models.Model):
       username = 'GT.000006792693.6792693'
       password = 'naPq1w!&'  # tu clave real
       # test
-      # url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      # url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
+      url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
 
-      url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      url_cancel = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
+      # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      # url_cancel = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
 
       # Paso 1: Obtener el token
       try:
