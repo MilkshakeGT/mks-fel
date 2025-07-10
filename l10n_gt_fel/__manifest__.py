@@ -2,7 +2,7 @@
     'name': 'FEL Guatemala (Digifact)',
     'version': '1.0',
     'summary': 'Integración con Digifact FEL para Guatemala',
-    'depends': ['account','point_of_sale'],
+    'depends': ['account'],
     'data': [
          #'views/account_move_views.xml',
          'views/account_move_views_.xml',
