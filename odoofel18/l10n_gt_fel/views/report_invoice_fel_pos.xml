@@ -1,0 +1,114 @@
+<!-- <odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@id='informations']" position="before">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <p t-if="o.fel_uuid"><strong>UUID FEL:</strong> <span t-esc="o.fel_uuid"/></p>
+                    <p t-if="o.serie_fel"><strong>Serie FEL:</strong> <span t-esc="o.serie_fel"/></p>
+                    <p t-if="o.numero_fel"><strong>Número FEL:</strong> <span t-esc="o.numero_fel"/></p>
+                    <p t-if="o.fechaEmision_fel"><strong>Fecha Emisión FEL:</strong> <span t-esc="o.fechaEmision_fel"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo> -->
+<!-- <odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@name='origin']" position="after">
+            <div class="row mt-3" name="fel_information">
+                <div class="col-12">
+                    <p t-if="o.fel_uuid"><strong>UUID FEL:</strong> <span t-esc="o.fel_uuid"/></p>
+                    <p t-if="o.serie_fel"><strong>Serie FEL:</strong> <span t-esc="o.serie_fel"/></p>
+                    <p t-if="o.numero_fel"><strong>Número FEL:</strong> <span t-esc="o.numero_fel"/></p>
+                    <p t-if="o.fechaEmision_fel"><strong>Fecha Emisión FEL:</strong> <span t-esc="o.fechaEmision_fel"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo> -->
+
+<!-- <odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@class='page']" position="inside">
+            <div class="row mt-3" name="fel_information" style="border:1px solid #999; padding:8px; margin-bottom:8px;">
+                <div class="col-12">
+                    <p t-if="o.fel_uuid"><strong>UUID FEL:</strong> <span t-esc="o.fel_uuid"/></p>
+                    <p t-if="o.serie_fel"><strong>Serie FEL:</strong> <span t-esc="o.serie_fel"/></p>
+                    <p t-if="o.numero_fel"><strong>Número FEL:</strong> <span t-esc="o.numero_fel"/></p>
+                    <p t-if="o.fechaEmision_fel"><strong>Fecha Emisión FEL:</strong> <span t-esc="o.fechaEmision_fel"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo> -->
+
+<!-- <odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@name='origin']" position="after">
+            
+            <div class="row mt-3" name="fel_information" style="border:1px solid #999; padding:8px; margin-bottom:8px;">
+                <div class="col-12">
+                    <p t-if="o.fel_uuid"><strong>UUID FEL:</strong> <span t-esc="o.fel_uuid"/></p>
+                    <p t-if="o.serie_fel"><strong>Serie FEL:</strong> <span t-esc="o.serie_fel"/></p>
+                    <p t-if="o.numero_fel"><strong>Número FEL:</strong> <span t-esc="o.numero_fel"/></p>
+                    <p t-if="o.fechaEmision_fel"><strong>Fecha Emisión FEL:</strong> <span t-esc="o.fechaEmision_fel"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo> -->
+
+<!-- <odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@id='payment_term']" position="inside">
+            <div class="row mt-3" name="fel_information" style="border:1px solid #999; padding:8px; margin-top:8px;">
+                <div class="col-12">
+                    <p t-if="o.fel_uuid"><strong>UUID FEL:</strong> <span t-esc="o.fel_uuid"/></p>
+                    <p t-if="o.serie_fel"><strong>Serie FEL:</strong> <span t-esc="o.serie_fel"/></p>
+                    <p t-if="o.numero_fel"><strong>Número FEL:</strong> <span t-esc="o.numero_fel"/></p>
+                    <p t-if="o.fechaEmision_fel"><strong>Fecha Emisión FEL:</strong> <span t-esc="o.fechaEmision_fel"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo> -->
+
+<!-- <odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@id='payment_term']" position="inside">
+
+            <div class="row mt-3" name="fel_debug" style="border:2px dashed red; padding:8px; margin-top:8px;">
+                <div class="col-12">
+                    <p><strong>Modelo (o._name):</strong> <span t-esc="o._name"/></p>
+                    <p><strong>ID de o:</strong> <span t-esc="o.id"/></p>
+                    <p><strong>FEL UUID en o.fel_uuid:</strong> <span t-esc="o.fel_uuid"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo> -->
+<odoo>
+    <template id="report_invoice_document_pos_fel" inherit_id="point_of_sale.report_invoice_document">
+        <xpath expr="//div[@id='payment_term']" position="inside">
+            <!-- DEPURACIÓN: Mostrar qué es o -->
+            <div class="row mt-3" name="fel_debug" style="border:2px dashed red; padding:8px; margin-top:8px;">
+                <div class="col-12">
+                    <p><strong>Modelo (o._name):</strong> <span t-esc="o._name"/></p>
+                    <p><strong>ID de o:</strong> <span t-esc="o.id"/></p>
+                    <p><strong>FEL UUID en o.fel_uuid:</strong> <span t-esc="o.fel_uuid"/></p>
+                </div>
+            </div>
+
+            <!-- Forzar lectura real de campos FEL -->
+            <t t-set="move_real" t-value="o.env['account.move'].sudo().with_context({}).browse(o.id).read(['fel_uuid','serie_fel','numero_fel','fechaEmision_fel'])[0]"/>
+            <div class="row mt-3" name="fel_information" style="border:1px solid #999; padding:8px; margin-top:8px;">
+                <div class="col-12">
+                    <p t-if="move_real.get('fel_uuid')"><strong>UUID FEL:</strong> <span t-esc="move_real.get('fel_uuid')"/></p>
+                    <p t-if="move_real.get('serie_fel')"><strong>Serie FEL:</strong> <span t-esc="move_real.get('serie_fel')"/></p>
+                    <p t-if="move_real.get('numero_fel')"><strong>Número FEL:</strong> <span t-esc="move_real.get('numero_fel')"/></p>
+                    <p t-if="move_real.get('fechaEmision_fel')"><strong>Fecha Emisión FEL:</strong> <span t-esc="move_real.get('fechaEmision_fel')"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
