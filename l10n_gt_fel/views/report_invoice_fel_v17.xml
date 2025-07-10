@@ -1,0 +1,14 @@
+<odoo>
+    <template id="report_invoice_fel_custom" inherit_id="account.report_invoice_document">
+        <xpath expr="//h2/span[@t-field='o.name']" position="after">
+            <div class="row mt4">
+                <div class="col-12 small-text">
+                    <p t-if="o.fel_uuid" style="font-size: 12px;"><strong>UUID FEL:</strong> <span t-esc="o.fel_uuid"/></p>
+                    <p t-if="o.serie_fel" style="font-size: 12px;"><strong>Serie FEL:</strong> <span t-esc="o.serie_fel"/></p>
+                    <p t-if="o.numero_fel" style="font-size: 12px;"><strong>Número FEL:</strong> <span t-esc="o.numero_fel"/></p>
+                    <p t-if="o.fechaEmision_fel" style="font-size: 12px;"><strong>Número FEL:</strong> <span t-esc="o.fechaEmision_fel"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
