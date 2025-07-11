@@ -66,7 +66,7 @@ class AccountMove(models.Model):
       # Test
       url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
       url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
-
+      _logger.info("Url generado:%s", url_certify)
       #Productivo
       # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
       # url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
