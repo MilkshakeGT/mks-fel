@@ -140,8 +140,8 @@ class AccountMove(models.Model):
 
       # Variables
       tax_id = '000006792693'
-      username = 'GT.000006792693.6792693'
-      password = 'naPq1w!&'  # tu clave real
+      username = 'GT.000006792693.TESTUSER'
+      password = '&2qH?+!?'  # tu clave real
       # test
       url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
       url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
