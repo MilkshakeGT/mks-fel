@@ -98,7 +98,9 @@ class AccountMove(models.Model):
           response = requests.post(url_certify, headers=headers, data=xml_payload)
           data = response.json()
           if int(data.get("code", 0)) > 1:
-            raise UserError(f"Certificación con advertencias o errores: {data.get('message', 'Sin mensaje')}")
+            raise UserError(f"Certificación con advertencias o errores:\n"
+            f"- Mensaje: {data.get('message', 'Sin mensaje')}\n"
+            f"- Detalle: {data.get('description', 'Sin descripción')}")
 
 
           
@@ -119,6 +121,8 @@ class AccountMove(models.Model):
       except Exception as e:
           raise UserError(f"Error al certificar con Digifact: {str(e)}")
 
+
+# A N U L A C I O N 
     def action_cancel_fel(self):
       self.ensure_one()
 
