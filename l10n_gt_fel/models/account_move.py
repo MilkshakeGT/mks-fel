@@ -58,9 +58,9 @@ class AccountMove(models.Model):
           raise UserError("Debe tener al menos una línea de producto para certificar.")
 
         # Variables del emisor
-      tax_id = '000006792693'
-      username = 'GT.000006792693.TESTUSER'
-      password = '&2qH?+!?'  # tu clave real
+      tax_id = '000038800748'
+      username = 'GT.000038800748.TESTUSER'
+      password = 'xXA4Wd%$'  # tu clave real
       format = 'XML'
       
       # Test
@@ -139,9 +139,9 @@ class AccountMove(models.Model):
           raise UserError("La factura debe estar en estado Cancelado o Borrador para anular FEL.")
 
       # Variables
-      tax_id = '000006792693'
-      username = 'GT.000006792693.TESTUSER'
-      password = '&2qH?+!?'  # tu clave real
+      tax_id = '000038800748'
+      username = 'GT.000038800748.TESTUSER'
+      password = 'xXA4Wd%$'  # tu clave real
       # test
       url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
       url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
