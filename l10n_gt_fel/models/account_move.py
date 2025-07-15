@@ -86,9 +86,12 @@ class AccountMove(models.Model):
 
       _logger.info("Token obtenido: %s", token)
       
-      xml_payload = generar_xml_fel(self).encode("utf-8")
+      xml_payload = generar_xml_fel(self)
 
       _logger.info("📄 XML FEL generado:\n%s", xml_payload)
+
+      xml_payload = xml_payload.encode("utf-8")
+
       # Paso 3: Enviar XML a Digifact
       headers = {
           'Content-Type': 'application/xml',
