@@ -48,7 +48,7 @@ def generar_xml_fel(factura):
     etree.SubElement(email_list, "Email").text = company.email or "info@empresa.com"
 
     adicional = etree.SubElement(seller, "AdditionlInfo")
-    etree.SubElement(adicional, "Info", Name="TipoFrase", Data="1", Value="1")
+    etree.SubElement(adicional, "Info", Name="TipoFrase", Data="1", Value="4")
     etree.SubElement(adicional, "Info", Name="Escenario", Data="1", Value="1")
 
     branch = etree.SubElement(seller, "BranchInfo")
