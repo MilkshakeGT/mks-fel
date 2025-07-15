@@ -58,19 +58,26 @@ class AccountMove(models.Model):
           raise UserError("Debe tener al menos una línea de producto para certificar.")
 
         # Variables del emisor
-      tax_id = '000038800748'
-      username = 'GT.000038800748.TESTUSER'
-      password = 'xXA4Wd%$'  # tu clave real
-      format = 'XML'
+      # tax_id = '000038800748'
+      # username = 'GT.000038800748.TESTUSER'
+      # password = 'xXA4Wd%$'  # tu clave real
+      # format = 'XML'
       
-      # Test
-      url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
-      _logger.info("Url generado:%s", url_certify)
-      #Productivo
-      # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      # url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+       # Variables del emisor
+      tax_id = '000038800748'
+      username = 'GT.000038800748.38800748'
+      password = 'N%BjV57%'  # tu clave real
+      format = 'XML'
 
+      # Test
+      # url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      # url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+      # _logger.info("Url generado:%s", url_certify)
+      
+      #Productivo
+      url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+      _logger.info("Url generado:%s", url_certify)
       # Paso 1: Obtener el token
       try:
           response = requests.post(url_token, json={
@@ -142,16 +149,24 @@ class AccountMove(models.Model):
           raise UserError("La factura debe estar en estado Cancelado o Borrador para anular FEL.")
 
       # Variables
+      # tax_id = '000038800748'
+      # username = 'GT.000038800748.TESTUSER'
+      # password = 'xXA4Wd%$'  # tu clave real
+
+      # Producción
       tax_id = '000038800748'
-      username = 'GT.000038800748.TESTUSER'
-      password = 'xXA4Wd%$'  # tu clave real
+      username = 'GT.000038800748.38800748'
+      password = 'N%BjV57%'  # tu clave real
+
       # test
-      url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
+      # url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      # url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
 
-      # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      # url_cancel = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
-
+      # Productivo
+      url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      url_cancel = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
+      _logger.info("Url generado:%s", url_cancel)
+      
       # Paso 1: Obtener el token
       try:
           response = requests.post(url_token, json={
