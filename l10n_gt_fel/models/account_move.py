@@ -59,7 +59,7 @@ class AccountMove(models.Model):
 
         # Variables del emisor test
       tax_id = '000118149822'
-      username = 'GT.000118149822.TESTUSER'
+      username = 'GT.000118149822.118149822'
       password = '?8qhQeu_'  # tu clave real
       format = 'XML'
       
@@ -70,13 +70,13 @@ class AccountMove(models.Model):
       # format = 'XML'
 
       # Test
-      url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
-      _logger.info("Url generado:%s", url_certify)
+      # url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      # url_certify = f"https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+      
       #Productivo
-      # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      # url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
-
+      url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      url_certify = f"https://felgtaws.digifact.com.gt/gt.com.apinuc/api/v2/transform/nuc?TAXID={tax_id}&USERNAME={username}&FORMAT={format}"
+      _logger.info("Url generado:%s", url_certify)
       # Paso 1: Obtener el token
       try:
           response = requests.post(url_token, json={
@@ -147,15 +147,15 @@ class AccountMove(models.Model):
 
       # Variables
       tax_id = '000118149822'
-      username = 'GT.000118149822.TESTUSER'
+      username = 'GT.000118149822.118149822'
       password = '?8qhQeu_'  # tu clave real
       format = 'XML'
-      
-      url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
 
-      # url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
-      # url_cancel = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
+      # url_token = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      # url_cancel = 'https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
+
+      url_token = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token'
+      url_cancel = 'https://felgtaws.digifact.com.gt/gt.com.apinuc/api/CancelFelGT'
 
       # Paso 1: Obtener el token
       try:
